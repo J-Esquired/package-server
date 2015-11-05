@@ -1,0 +1,11 @@
+#!/bin/sh
+##
+# Launch Script for iWonder Bundler
+# Sat Sep 27, 2014 10:30:00 (Giavaneers - LBM) created
+##
+
+appMacOSDir=$(cd "$(dirname "$0")"; pwd)
+echo $appMacOSDir
+cd $appMacOSDir
+
+java -cp lib/PumaJFramework.jar com.mypackage.PjShapeProject addThreeRectangles

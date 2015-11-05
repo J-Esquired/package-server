@@ -1,0 +1,6 @@
+.column {
+    float:left; width:50%;
+    box-sizing:border-box;
+    padding:5px;
+    border: 1px;
+}

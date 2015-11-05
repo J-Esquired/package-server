@@ -1,0 +1,50 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>  Packaging An Application </title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+    <link rel="stylesheet" type="text/css" href="views/stylesheet.css">
+</head>
+<body>
+    <h1 style="text-align:center">
+        Application Packager
+    </h1>
+    <div style="margin:auto; width:600px">
+        <div class="column">
+            <ol>
+                <li>Download the Application Template</li>
+                <li>Upload jar files necessary to the project htaeosssas</li>
+                <li>Download the Application Template</li>
+                <li>Download the Application Template</li>
+            </ol>
+        </div>
+        <div class="column">
+            <p>
+                <form onsubmit="downloadTemplate()">
+                    Download Template Application:<br><br>
+                    <input type="submit" value="Download Template">
+                </form>
+            </p>
+            <p>
+                <form onsubmit="download(this['jars'], this['packageClass'].value, this['params'].value)">
+                    Necessary Jar Files:<br><br>
+                    <input type="file" multiple="" name="jars[]" id="jars">
+                    <br><br>
+                    Package Name and Main Class:<br><br>
+                    <input type=text name="packageClass" value="com.package.MainClass" size="35" class="autogrow"></input>
+                    <br><br>
+                    Parameters:<br><br>
+                    <input type=text name="params" value="addThreeRectangles" size="35" class="autogrow"></input>
+                    <br><br>
+                    <input type="submit" value="Download">
+                </form>
+            </p>
+        </div>
+    </div>
+    <script type="text/javascript" src="/scripts/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="/scripts/index.js"></script>
+</body>
+    
+</html>
