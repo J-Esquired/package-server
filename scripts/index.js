@@ -80,15 +80,17 @@ function download(jars, packageClass, params) {
     "use strict";
 
     var LaunchJava = "#!/bin/sh\n##\n# Launch Script for iWonder Bundler\n# Sat Sep 27, 2014 10:30:00 (Giavaneers - LBM) created\n##\nappMacOSDir=$(cd \"$(dirname \"$0\")\"; pwd)\necho $appMacOSDir\ncd $appMacOSDir\njava -cp "
+    var addString = '';
     for(var i = 0; i < jars.files.length; i++){
-        LaunchJava += 'lib/' + jars.files[i].name;
-        if(i < jars.files.length - 1) LaunchJava += ':'
+        addString += 'lib/' + jars.files[i].name;
+        if(i < jars.files.length - 1) addString += ':'
     }
-    LaunchJava += ' ' + packageClass.trim() + ' ' + params.trim();
+    addString += ' ' + packageClass.trim() + ' ' + params.trim();
     
     var element = document.createElement('a');
-    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(LaunchJava));
-    element.setAttribute('download', 'LaunchJava');
+//    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(LaunchJava));
+    element.setAttribute('href', 'http://localhost:8080/downloadLaunchJava');
+    element.setAttribute('download', 'template.zip');
 
     element.style.display = 'none';
     document.body.appendChild(element);
