@@ -50,7 +50,8 @@ api.use(function (req, res) {
     // Pass to next layer of middleware
 //    next();
 });
-var server = app.listen(port,function() {
+// var server = app.listen(port,function() {
+var server = app.listen(process.env.PORT, process.env.IP, function() {
     console.log("We have started our server on port " + port);
 })
 var apiServer = api.listen(apiPort,function() {

@@ -63,7 +63,7 @@ $(function(){
 
 function downloadTemplate() {
     var element = document.createElement('a');
-    element.setAttribute('href', 'http://localhost:8080/downloadTemplate');
+    element.setAttribute('href', '/downloadTemplate');
     //  element.setAttribute('href', 'http://localhost:8080/res/image.png');
     element.setAttribute('download', "template.zip");
 
@@ -89,7 +89,7 @@ function download(jars, packageClass, params) {
     
     var element = document.createElement('a');
 //    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(LaunchJava));
-    element.setAttribute('href', 'http://localhost:8080/downloadLaunchJava');
+    element.setAttribute('href', '/downloadLaunchJava?addString='+escape(addString.trim()));
     element.setAttribute('download', 'template.zip');
 
     element.style.display = 'none';
